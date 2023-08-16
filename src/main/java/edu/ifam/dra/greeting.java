@@ -1,12 +1,12 @@
 package edu.ifam.dra;
 
-public class greeting {
+public class Greeting {
 	
 	private long id;
 	private String name;
 	
 	//constructor
-	public greeting(long id, String name) {
+	public Greeting(long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;

@@ -8,12 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController //this annotation tells this class that any object returned in this methods will return a .json
 
-public class greetingController {
+public class GreetingController {
+	
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 	
 	@GetMapping("/Greeting")
-	public greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-		return new greeting(counter.incrementAndGet(), String.format(template, name));
+	public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 }
+
+
